@@ -181,12 +181,12 @@
       <option name="presentableId" value="Default" />
       <updated>1616988974370</updated>
       <workItem from="1616988976921" duration="11337000" />
-      <workItem from="1617029770366" duration="4839000" />
+      <workItem from="1617029770366" duration="5194000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16176000" />
+    <option name="totallyTimeSpent" value="16531000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -198,7 +198,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
