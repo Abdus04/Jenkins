@@ -33,7 +33,7 @@ pipeline {
 
         stage('Code Analysis') {
           steps {
-            withSonarQubeEnv('sonarqube') {
+            withSonarQubeEnv('sonar') {
               bat 'gradle sonarqube'
             }
 
