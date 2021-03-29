@@ -23,7 +23,13 @@ pipeline {
       }
     }
 
-    stage('Slack Notification') {
+    stage('Deployment') {
+      steps {
+        bat 'gradle publish'
+      }
+    }
+
+    stage('Slack Notifacation') {
       steps {
         slackSend(channel: '#ogl', message: 'The project is updated!')
       }
