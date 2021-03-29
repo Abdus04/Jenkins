@@ -41,7 +41,7 @@ group 'com.example'
 version '1.0'
 
 publishing {
-    repositories {
+    reposes {
         maven {
             url 'https://mymavenrepo.com/repo/5II4mW6jkdjuN5yzXqZ6/'
             credentials {
