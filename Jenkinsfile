@@ -6,8 +6,11 @@ pipeline {
         bat 'gradle build'
         bat 'gradle javadoc'
         archiveArtifacts 'build/libs/*.jar'
-        archiveArtifacts 'build/docs/**'
+        archiveArtifacts 'build/docs/*'
         archiveArtifacts 'build/test-results/**'
+      }
+      failure {
+           emailext(subject: 'Project Integration', body: 'There was an error integrating your project!', from: 'ha_rezgui@esi.dz', to: 'hn_messaoudi@esi.dz')
       }
     }
 
