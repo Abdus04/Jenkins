@@ -25,8 +25,9 @@ pipeline {
 
     stage('Slack Notification') {
       steps {
-        slackSend(baseUrl: 'https://hooks.slack.com/services/', token: 'T01MCAEM4BD/B01SL1KGL1K/qZzhVP0W028lWAsbhNczi979', teamDomain: 'equipededevel-igz2777', message: 'The project is updated!', channel: 'ogl')
-      }
+                      slackSend channel: '#ogl',
+                                message: 'The project is updated!'
+                  }
     }
 
   }
