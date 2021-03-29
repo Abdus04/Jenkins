@@ -25,9 +25,8 @@ pipeline {
 
     stage('Slack Notification') {
       steps {
-                      slackSend channel: '#ogl',
-                                message: 'The project is updated!'
-                  }
+        slackSend(channel: '#ogl', message: 'The project is updated!')
+      }
     }
 
   }
