@@ -23,6 +23,12 @@ pipeline {
       }
     }
 
+    stage('Test Reporting') {
+          steps {
+            cucumber '**/*.json'
+          }
+        }
+
     stage('Deployment') {
       steps {
         bat 'gradle publish'
@@ -35,11 +41,7 @@ pipeline {
       }
     }
 
-    stage('Test Reporting') {
-      steps {
-        cucumber '**/*.json'
-      }
-    }
+
 
   }
 }
