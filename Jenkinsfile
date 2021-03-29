@@ -4,6 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         bat 'gradle build'
+        sh 'gradle javadoc'
       }
     }
 
