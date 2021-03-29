@@ -24,10 +24,24 @@ pipeline {
     }
 
     stage('Test Reporting') {
+      parallel {
+        stage('Test Reporting') {
           steps {
             cucumber '**/*.json'
           }
         }
+
+        stage('Code Analysis') {
+          steps {
+            withSonarQubeEnv('sonarqube') {
+              bat 'gradle sonarqube'
+            }
+
+          }
+        }
+
+      }
+    }
 
     stage('Deployment') {
       steps {
@@ -40,8 +54,6 @@ pipeline {
         slackSend(channel: '#ogl', message: 'The project is updated!')
       }
     }
-
-
 
   }
 }
